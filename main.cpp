@@ -1,24 +1,29 @@
 #include <Arduino.h>
-int led_DIGITAL_PIN = 3;
-void setup() {
-  Serial.begin(9600);
-  
-  pinMode(led_DIGITAL_PIN, OUTPUT);
+char userInput;
+
+void setup(){
+  pinMode(3, OUTPUT);
+  Serial.begin(9600);                        
+
 }
-int value=0;
 
+void loop(){
 
- 
-void loop() 
-   {
-     while (Serial.available())
-        {
-           value = Serial.read();
+while(Serial.available()> 0){ 
+    
+    userInput = Serial.read();             
+      
+      if(userInput == '1'){                  
+        digitalWrite(3, HIGH);
+        
+      }
+       else {
+          digitalWrite(3, LOW);
         }
-     Serial.print(value);
-     if (value == 1)
-        digitalWrite (led_DIGITAL_PIN, HIGH);
-     
-     else if (value == 2)
-        digitalWrite (led_DIGITAL_PIN, LOW);
-   }
+
+       
+                        
+            
+      
+      } 
+  }
