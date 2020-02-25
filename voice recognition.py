@@ -1,6 +1,6 @@
 import speech_recognition as sr
 import serial
-Arduino_Serial = serial.Serial('COM3', 9600)
+Arduino_Serial = serial.Serial('The COM port you have', 9600)
 value = 0
 while True :
     r = sr.Recognizer()
