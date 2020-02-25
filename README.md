@@ -4,9 +4,10 @@ The offical page of the Arduino compatible Voice Recognition.
 Works with python 3 and the latest arduino version.
 
 Libraries
+
 Python : pyaudio, Speech_Recognition, pyserial
 
-Arudino : nothing
+Arduino : nothing
 
 Usage of code:
 
